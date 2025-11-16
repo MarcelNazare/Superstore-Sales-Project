@@ -1,5 +1,7 @@
+-- CREATING THE DATABASE 
 CREATE DATABASE superstore_db;
 
+-- CREATING MAIN SALES FACT TABLE
 CREATE TABLE sales_fact(
     row_id INT PRIMARY KEY,
     order_id VARCHAR(50),
@@ -22,3 +24,18 @@ CREATE TABLE sales_fact(
     discount DECIMAL(5,2),
     profit DECIMAL(10,2)
 );
+
+-- CREATING DIMENSION PRODUCTS TABLE
+CREATE TABLE dim_products(
+
+)
+
+-- CREATING DIMENSION CUSTOMERS TABLE
+CREATE TABLE dim_customers(
+    
+)
+
+-- CREATING DIMENSION GEOGRAPHY TABLE
+CREATE TABLE dim_geography(
+    
+)
