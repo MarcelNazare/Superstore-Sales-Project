@@ -66,10 +66,3 @@ This data dictionary documents the fields in `data/raw/Superstore.csv` (the Supe
 - Prefer programmatic generation (snippet above) and then fill brief human-friendly `description` fields.
 - If you publish datasets to Power BI Service, link your documentation (or host a single page) so report authors can reference it.
 
----
-
-If you'd like, I can:
-- Add the programmatic snippet as a new cell to `python/notebooks/main.ipynb` (I can do this for you), and/or
-- Populate the `description` column with richer domain-specific descriptions for each field.
-
-Which would you prefer next?

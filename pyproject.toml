@@ -1,7 +1,8 @@
 [project]
 name = "superstore-sales-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "A comprehensive data analysis project for analyzing Superstore sales data with interactive visualizations, reports, and dashboards.
+"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
