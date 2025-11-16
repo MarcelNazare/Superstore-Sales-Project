@@ -1,7 +1,7 @@
 import pandas as pd
 
-df = pd.read_csv("data/raw/Superstore.csv")   
-
+file = "C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\raw\\Superstore.csv"
+df = pd.read_csv(file, encoding='latin1')
 
 def main():
     print("Hello from superstore-sales-dataset!")

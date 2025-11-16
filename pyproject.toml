@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "pandas>=2.3.3",
     "plotly>=6.4.0",
     "shiny>=1.5.0",
     "ydata-profiling[notebook,unicode]>=4.17.0",
