@@ -10,6 +10,9 @@ file = "C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales P
 # Loading data as df
 df = pd.read_csv(file, encoding='latin1')
 
+processed_file = "C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\processed\\superstore_cleaned.csv"
+new_df = pd.read_csv(processed_file, encoding='latin1')
+new_df.columns
 # %% [markdown]
 # # Checking For Dataset Value
 

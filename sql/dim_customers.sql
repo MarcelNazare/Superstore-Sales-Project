@@ -15,5 +15,5 @@ SELECT
   customer_id,
   customer_name,
   segment
-FROM superstore
+FROM superstore_data
 WHERE customer_id IS NOT NULL;

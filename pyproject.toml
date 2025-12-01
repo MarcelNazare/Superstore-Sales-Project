@@ -1,13 +1,15 @@
 [project]
 name = "superstore-sales-project"
 version = "0.1.0"
-description = "A comprehensive data analysis project for analyzing Superstore sales data with interactive visualizations, reports, and dashboards.
-"
+description = ""
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "dotenv>=0.9.9",
     "pandas>=2.3.3",
     "plotly>=6.4.0",
+    "psycopg2>=2.9.11",
     "shiny>=1.5.0",
+    "sqlalchemy>=2.0.44",
     "ydata-profiling[notebook,unicode]>=4.17.0",
 ]
