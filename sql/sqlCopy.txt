@@ -1,5 +1,0 @@
-\copy superstore ("Order ID", "Order Date", "Ship Date", "Ship Mode", "Customer ID", "Customer Name", "Segment", Country, City, State, "Postal Code", Region, "Product ID", Category, "Sub-Category", "Product Name", Sales, Quantity, Discount, Profit) FROM 'C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\processed\\superstore_cleaned.csv' WITH CSV HEADER ENCODING 'latin1';
-
-C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\raw\\Superstore.csv"
-
-data\processed\superstore_cleaned.csv

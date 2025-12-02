@@ -9,3 +9,6 @@ activate:
 
 data2db:
 	@uv run python/scripts/load_to_postgres.py
+
+freeze:
+	@pip freeze > requirements.txt
