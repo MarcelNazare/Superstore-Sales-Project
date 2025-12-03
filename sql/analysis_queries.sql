@@ -61,3 +61,19 @@ SELECT
   END AS profit_yoy_pct
 FROM yearly
 ORDER BY year;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 3 What are the sales trends over time
+SELECT 
+    "Order Year" as Order_Year,
+    "Order Month" as Order_Month,
+    "Number Of Order Month" as Month_Number,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales
+FROM superstore_data
+GROUP BY 
+    Order_Year,
+    Order_Month,
+    Month_Number
+ORDER BY 
+    Order_Year,
+    Month_Number;
