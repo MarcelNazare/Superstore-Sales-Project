@@ -46,6 +46,7 @@ FROM superstore_data
 GROUP BY "Category", "Sub-Category"
 ORDER BY total_profit DESC;
 
+-- Regional Perfomance View
 CREATE OR REPLACE VIEW v_regional_performance AS
 SELECT
     "Region" AS region,
