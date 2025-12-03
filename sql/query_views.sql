@@ -46,7 +46,11 @@ FROM superstore_data
 GROUP BY "Category", "Sub-Category"
 ORDER BY total_profit DESC;
 
--- View for Regional Sales and Profit
 CREATE OR REPLACE VIEW v_regional_performance AS
 SELECT
     "Region" AS region,
+    ROUND(SUM("Sales"::numeric), 2) AS total_sales,
+    ROUND(SUM("Profit"::numeric), 2) AS total_profit    
+FROM superstore_data
+GROUP BY "Region"
+ORDER BY total_profit DESC;
