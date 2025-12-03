@@ -93,3 +93,160 @@ GROUP BY Product_Name
 ORDER BY Total_Profit desc
 LIMIT 10;
 -- ==========================================================================================================
+-- ==========================================================================================================
+-- 5. What the best and worst performing categories and sub-categories
+SELECT 
+    "Category" as Category,
+    "Sub-Category" as Sub_Category,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY 
+    Category,
+    Sub_Category
+ORDER BY Total_Profit desc;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 6. What are the products with highest profit margins
+SELECT
+    "Product Name" as Product_Name,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit,
+    CASE
+        WHEN SUM("Sales"::numeric) = 0 THEN NULL
+        ELSE ROUND((SUM("Profit"::numeric) / SUM("Sales"::numeric))::numeric,4)
+    END AS Profit_Margin
+FROM superstore_data
+GROUP BY Product_Name
+ORDER BY Profit_Margin desc
+LIMIT 10;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 7. Correlation between discount and profit
+SELECT 
+    "Discount" as Discount,
+    ROUND(AVG("Profit"::numeric),2) as Avg_Profit  
+FROM superstore_data
+GROUP BY Discount
+ORDER BY Discount;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- GEOGRAPHIC ANALYSIS QUERIES
+-- 8. What are sales by region, state and city
+SELECT
+    "Region" as Region,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY Region
+ORDER BY Total_Sales desc;
+-- By State
+SELECT
+    "State" as State,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY State
+ORDER BY Total_Sales desc
+LIMIT 10;
+-- By City
+SELECT
+    "City" as City,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY City
+ORDER BY Total_Sales desc
+LIMIT 10;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 9. What are the regional profit comparisons
+SELECT
+    "Region" as Region,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit,
+    CASE
+        WHEN SUM("Sales"::numeric) = 0 THEN NULL
+        ELSE ROUND((SUM("Profit"::numeric) / SUM("Sales"::numeric))::numeric,4)
+    END AS Profit_Margin
+FROM superstore_data
+GROUP BY Region
+ORDER BY Profit_Margin desc;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- What are the top products by performance 
+SELECT 
+    "Region" as Region,
+    "Product Name" as Product_Name,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY 
+    Region,
+    Product_Name
+ORDER BY 
+    Region,
+    Total_Profit desc;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- CUSTOMER ANALYSIS QUERIES
+-- 10. What is the top customer segment by performance
+SELECT 
+    "Segment" as Customer_Segment,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit 
+FROM superstore_data
+GROUP BY Customer_Segment
+ORDER BY Total_Profit desc;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 11. Who are the top customers by sales value
+SELECT 
+    "Customer Name" as Customer_Name,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit 
+FROM superstore_data
+GROUP BY Customer_Name
+ORDER BY Total_Sales desc
+LIMIT 10;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 12. What are the customer ordering patterns
+SELECT 
+    "Customer Name" as Customer_Name,
+    COUNT("Order ID") as Number_of_Orders,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit 
+FROM superstore_data
+GROUP BY Customer_Name
+ORDER BY Number_of_Orders desc
+LIMIT 10;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- OPERATIONAL METRICS QUERIES
+--13. What the is the average shipping time by ship mode
+SELECT
+    "Ship Mode" as Ship_Mode,
+    ROUND(AVG("Order Processing Days"::numeric),2) as Avg_Shipping_Time_Days   
+FROM superstore_data
+GROUP BY Ship_Mode
+ORDER BY Avg_Shipping_Time_Days;
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- 14. What is order fulfillment analysis
+SELECT 
+    "Order Year" as Order_Year,
+    "Order Month" as Order_Month,
+    "Number Of Order Month" as Month_Number,
+    COUNT("Order ID") as Number_of_Orders,
+    ROUND(AVG("Order Processing Days"::numeric),2) as Avg_Shipping_Time_Days
+FROM superstore_data
+GROUP BY 
+    Order_Year,
+    Order_Month,
+    Month_Number  
+ORDER BY 
+    Order_Year,
+    Month_Number;
+-- ==========================================================================================================
+-- ==========================================================================================================
