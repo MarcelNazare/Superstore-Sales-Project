@@ -1,3 +1,4 @@
+-- SALES PERFOMANCE ANALYSIS QUERIES
 -- ==========================================================================================================
 -- 1. What are the total sales, profit and quantity by year, quarter and month
 SELECT 
@@ -77,3 +78,18 @@ GROUP BY
 ORDER BY 
     Order_Year,
     Month_Number;
+
+
+-- ==========================================================================================================
+-- ==========================================================================================================
+-- PRODUCT ANALYSIS QUERIES
+-- 4. What are the top 10 products by sales, profit 
+SELECT 
+    "Product Name" as Product_Name,
+    ROUND(SUM("Sales"::numeric),2) as Total_Sales,
+    ROUND(SUM("Profit"::numeric),2) as Total_Profit
+FROM superstore_data
+GROUP BY Product_Name
+ORDER BY Total_Profit desc
+LIMIT 10;
+-- ==========================================================================================================
