@@ -1,9 +1,9 @@
-# app.py
+# Visualization Dashboard In Python
 from shiny import App, render, ui
 
 # Define the UI
 app_ui = ui.page_fluid(
-    ui.h1("Hello Shiny for Python!"),
+    ui.h1("Super Store Data!"),
     ui.input_slider("n", "Number of bins:", 1, 50, 25),
     ui.output_text("txt")
 )

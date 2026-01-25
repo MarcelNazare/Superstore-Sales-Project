@@ -10,5 +10,8 @@ activate:
 data2db:
 	@uv run python/scripts/load_to_postgres.py
 
+data2csv:
+	@uv run python/scripts/data_to_csv.py
+
 freeze:
 	@pip freeze > requirements.txt
