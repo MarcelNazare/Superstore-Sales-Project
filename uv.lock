@@ -1797,6 +1797,15 @@ wheels = [
 ]
 
 [[package]]
+name = "perlcompat"
+version = "1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/38/aa/0c57c10ce466505988f04c7e05a35279a4dedb6b6bf8819a165e02819f56/perlcompat-1.1.tar.gz", hash = "sha256:1d2568814b2ceef1dc32c1393fab78c6dd94bea04eb50b97828f7dc3c3b1a5ea", size = 3100, upload-time = "2019-07-05T09:20:12.276Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/42/ab/328e564486228c8ed12085e4439fd39351e23333f52a8ed6833e4715efb8/perlcompat-1.1-py3-none-any.whl", hash = "sha256:4548c2c91fd3df95015581d8454f1d568b0851f6e89057315cfb3baf80c0af6d", size = 15780, upload-time = "2019-07-05T09:20:10.277Z" },
+]
+
+[[package]]
 name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2032,6 +2041,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/dd/7f/9998706bc516bdd664ccf929a1da6c6e5ee06e48f723ce45aae7cf3ff36e/puremagic-1.30.tar.gz", hash = "sha256:f9ff7ac157d54e9cf3bff1addfd97233548e75e685282d84ae11e7ffee1614c9", size = 314785, upload-time = "2025-07-04T18:48:36.061Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/91/ed/1e347d85d05b37a8b9a039ca832e5747e1e5248d0bd66042783ef48b4a37/puremagic-1.30-py3-none-any.whl", hash = "sha256:5eeeb2dd86f335b9cfe8e205346612197af3500c6872dffebf26929f56e9d3c1", size = 43304, upload-time = "2025-07-04T18:48:34.801Z" },
+]
+
+[[package]]
+name = "py-stats"
+version = "0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "perlcompat" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/92/eea383d2e7469a20670694cbb9b2883d429d723f090c7da53d6b77c163cc/py-stats-0.2.tar.gz", hash = "sha256:0cb63bf846d48fbbdc18cf1e3fbf42e7269484afe897f7c84585a42dabf538ba", size = 7245, upload-time = "2023-03-20T18:20:05.526Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/de/3ec76da4f5c4fcf27a3b02c09b1eaa968cecbe0b26d1c457003e00d635a7/py_stats-0.2-py3-none-any.whl", hash = "sha256:201a98e485fbcc7dee07e398b49ec91221d29c0cf2a81f9a85b1bcc53c8e673e", size = 18746, upload-time = "2023-03-20T18:20:03.842Z" },
 ]
 
 [[package]]
@@ -2851,6 +2872,7 @@ dependencies = [
     { name = "pandas" },
     { name = "plotly" },
     { name = "psycopg2" },
+    { name = "py-stats" },
     { name = "shiny" },
     { name = "sqlalchemy" },
     { name = "ydata-profiling", extra = ["notebook", "unicode"] },
@@ -2862,6 +2884,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "plotly", specifier = ">=6.4.0" },
     { name = "psycopg2", specifier = ">=2.9.11" },
+    { name = "py-stats", specifier = ">=0.2" },
     { name = "shiny", specifier = ">=1.5.0" },
     { name = "sqlalchemy", specifier = ">=2.0.44" },
     { name = "ydata-profiling", extras = ["notebook", "unicode"], specifier = ">=4.17.0" },
