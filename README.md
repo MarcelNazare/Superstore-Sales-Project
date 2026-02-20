@@ -478,7 +478,7 @@ For questions or issues:
 
 ---
 
-**Last Updated:** November 2025  
+**Last Updated:** February 2026  
 **Project Version:** 0.1.0  
 **Status:** Active Development
 
