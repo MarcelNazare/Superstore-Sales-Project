@@ -1,5 +1,5 @@
 run-dashboard:
-	@shiny run --reload --launch-browser python/scripts/dashboard.py
+	@shiny run --reload --launch-browser python/dashboard/dashboard.py
 
 run-main:
 	@uv run python/scripts/main.py

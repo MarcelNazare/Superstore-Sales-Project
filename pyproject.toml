@@ -14,6 +14,7 @@ dependencies = [
     "py-stats>=0.2",
     "scikit-learn>=1.8.0",
     "shiny>=1.5.0",
+    "shinywidgets>=0.7.1",
     "sqlalchemy>=2.0.44",
     "ydata-profiling[notebook,unicode]>=4.17.0",
 ]
