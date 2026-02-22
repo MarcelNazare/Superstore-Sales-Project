@@ -1,5 +1,5 @@
 run-dashboard:
-	@shiny run --reload --launch-browser python/dashboard/dashboard.py
+	@streamlit run python/dashboard/dashboard.py
 
 run-main:
 	@uv run python/scripts/main.py
@@ -15,3 +15,13 @@ data2csv:
 
 freeze:
 	@pip freeze > requirements.txt
+
+location:
+	@uv run python/dashboard/file_location.py
+
+sync:
+	@uv sync
+
+lock:
+	@uv lock
+
