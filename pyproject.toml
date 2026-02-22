@@ -12,6 +12,7 @@ dependencies = [
     "prophet>=1.3.0",
     "psycopg2>=2.9.11",
     "py-stats>=0.2",
+    "scikit-learn>=1.8.0",
     "shiny>=1.5.0",
     "sqlalchemy>=2.0.44",
     "ydata-profiling[notebook,unicode]>=4.17.0",
