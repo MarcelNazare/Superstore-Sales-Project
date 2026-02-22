@@ -24,6 +24,7 @@ A comprehensive data analysis project for analyzing Superstore sales data with i
 The Superstore Sales Project is a data-driven analysis solution designed to extract insights from retail sales data. This project encompasses data processing, exploratory analysis, interactive dashboards, and comprehensive reporting capabilities using modern data science tools and technologies.
 
 **Key Objectives:**
+
 - Analyze sales trends and patterns
 - Identify key performance indicators (KPIs)
 - Generate actionable business insights
@@ -70,16 +71,16 @@ Superstore Sales Project/
 
 ### Directory Details
 
-| Directory | Purpose |
-|-----------|---------|
-| `data/raw/` | Contains the original, unmodified Superstore.csv dataset |
-| `data/processed/` | Stores cleaned and transformed data ready for analysis |
+| Directory           | Purpose                                                    |
+| ------------------- | ---------------------------------------------------------- |
+| `data/raw/`         | Contains the original, unmodified Superstore.csv dataset   |
+| `data/processed/`   | Stores cleaned and transformed data ready for analysis     |
 | `python/notebooks/` | Jupyter notebooks for interactive exploration and analysis |
-| `python/scripts/` | Reusable Python scripts for data processing and dashboards |
-| `sql/` | SQL queries for data extraction and manipulation |
-| `visualizations/` | Generated charts and visual outputs |
-| `reports/` | Compiled HTML reports and analytics summaries |
-| `documentation/` | Project guides, data dictionaries, and specifications |
+| `python/scripts/`   | Reusable Python scripts for data processing and dashboards |
+| `sql/`              | SQL queries for data extraction and manipulation           |
+| `visualizations/`   | Generated charts and visual outputs                        |
+| `reports/`          | Compiled HTML reports and analytics summaries              |
+| `documentation/`    | Project guides, data dictionaries, and specifications      |
 
 ---
 
@@ -87,14 +88,14 @@ Superstore Sales Project/
 
 ### Core Technologies
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| **Python** | 3.11+ | Primary programming language for data analysis |
-| **Pandas** | 2.3.3+ | Data manipulation and transformation |
-| **Plotly** | 6.4.0+ | Interactive data visualization library |
-| **Shiny for Python** | 1.5.0+ | Interactive web dashboard framework |
-| **Jupyter Notebook** | Latest | Interactive coding and analysis environment |
-| **ydata-profiling** | 4.17.0+ | Automated exploratory data analysis |
+| Tool                 | Version | Purpose                                        |
+| -------------------- | ------- | ---------------------------------------------- |
+| **Python**           | 3.11+   | Primary programming language for data analysis |
+| **Pandas**           | 2.3.3+  | Data manipulation and transformation           |
+| **Plotly**           | 6.4.0+  | Interactive data visualization library         |
+| **Shiny for Python** | 1.5.0+  | Interactive web dashboard framework            |
+| **Jupyter Notebook** | Latest  | Interactive coding and analysis environment    |
+| **ydata-profiling**  | 4.17.0+ | Automated exploratory data analysis            |
 
 ### Data Analysis Stack
 
@@ -105,12 +106,12 @@ Superstore Sales Project/
 
 ### Visualization & Reporting Tools
 
-| Tool | Usage |
-|------|-------|
-| **Plotly** | Interactive web-based charts and graphs |
-| **Shiny for Python** | Real-time interactive dashboards |
-| **Power BI** | Advanced business intelligence and analytics |
-| **HTML Reports** | Formatted static reports |
+| Tool             | Usage                                                                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Plotly**       | Interactive web-based charts and graphs                                                                                                                    |
+| **Streamlit**    | Python data visualization and dashboards (see example: [live app](https://marcelnazare-superstore-sales-p-pythondashboarddashboard-devke8.streamlit.app/)) |
+| **Power BI**     | Advanced business intelligence and analytics                                                                                                               |
+| **HTML Reports** | Formatted static reports                                                                                                                                   |
 
 ### Development Tools
 
@@ -141,16 +142,19 @@ python -m venv .venv
 ### Step 3: Activate Virtual Environment
 
 **On Windows (Command Prompt):**
+
 ```bash
 .venv\Scripts\activate.bat
 ```
 
 **On Windows (PowerShell):**
+
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
 **On macOS/Linux:**
+
 ```bash
 source .venv/bin/activate
 ```
@@ -158,16 +162,19 @@ source .venv/bin/activate
 ### Step 4: Install Dependencies
 
 Using UV (recommended):
+
 ```bash
 uv pip install -r requirements.txt
 ```
 
 Or using pip:
+
 ```bash
 pip install -e .
 ```
 
 This will install all dependencies specified in `pyproject.toml`:
+
 - pandas >= 2.3.3
 - plotly >= 6.4.0
 - shiny >= 1.5.0
@@ -193,7 +200,9 @@ uv run python/scripts/main.py
 
 ### Launching Interactive Dashboard
 
-Start the Shiny dashboard with auto-reload and browser launch:
+There are two dashboard implementations:
+
+- **Streamlit** – used for python data visualizations. A deployed example is available at [https://marcelnazare-superstore-sales-p-pythondashboarddashboard-devke8.streamlit.app/](https://marcelnazare-superstore-sales-p-pythondashboarddashboard-devke8.streamlit.app/).
 
 ```bash
 make run-dashboard
@@ -202,10 +211,10 @@ make run-dashboard
 Or directly:
 
 ```bash
-shiny run --reload --launch-browser python/scripts/dashboard.py
+streamlit run python/scripts/dashboard.py
 ```
 
-The dashboard will be available at `http://localhost:8000` (or similar).
+The dashboard will be available at `http://localhost:8501` (or similar).
 
 ### Accessing Jupyter Notebook
 
@@ -228,34 +237,39 @@ make activate          # Activate Python virtual environment
 ## Key Features
 
 ### 1. **Data Processing Pipeline**
-   - Automated data loading from CSV sources
-   - Data cleaning and validation
-   - Feature engineering and transformation
-   - Output to processed data directory
 
-### 2. **Interactive Dashboard (Shiny)**
-   - Real-time data visualization
-   - User-interactive filters and controls
-   - Dynamic filtering by multiple dimensions
-   - Export capabilities
+- Automated data loading from CSV sources
+- Data cleaning and validation
+- Feature engineering and transformation
+- Output to processed data directory
+
+### 2. **Interactive Dashboard (Streamlit)**
+
+- Real-time data visualization
+- User-interactive filters and controls
+- Dynamic filtering by multiple dimensions
+- Export capabilities
 
 ### 3. **Exploratory Data Analysis (EDA)**
-   - Automated profiling with ydata-profiling
-   - Distribution analysis
-   - Correlation matrices
-   - Outlier detection
+
+- Automated profiling with ydata-profiling
+- Distribution analysis
+- Correlation matrices
+- Outlier detection
 
 ### 4. **Comprehensive Reporting**
-   - HTML-formatted reports
-   - Data summaries and statistics
-   - Visual charts and graphs
-   - Stakeholder-ready outputs
+
+- HTML-formatted reports
+- Data summaries and statistics
+- Visual charts and graphs
+- Stakeholder-ready outputs
 
 ### 5. **Visualization Suite**
-   - Interactive Plotly charts
-   - Sales trend visualizations
-   - Regional performance analysis
-   - Product performance dashboards
+
+- Interactive Plotly charts
+- Sales trend visualizations
+- Regional performance analysis
+- Product performance dashboards
 
 ---
 
@@ -293,19 +307,22 @@ Analysis & Reporting
 ## Reports & Visualizations
 
 ### HTML Reports
+
 - **Location:** `reports/SuperstoreSalesReport.html`
 - **Contents:** Summary statistics, key metrics, visualizations
 - **Usage:** Open in web browser for stakeholder review
 
 ### Interactive Dashboards
-- **Shiny Dashboard:** Real-time, interactive web application
+
+- **Streamlit Dashboard:** Real-time, interactive web application
 - **Update Frequency:** Real-time (connected to processed data)
-- **Access:** `http://localhost:8000` (when running)
+- **Access:** `http://localhost:8501` (when running)
 
 ### Visualization Outputs
+
 - **Location:** `visualizations/`
 - **Formats:** PNG, SVG, HTML (interactive)
-- **Types:** 
+- **Types:**
   - Sales trends over time
   - Regional performance heatmaps
   - Product category analysis
@@ -320,6 +337,7 @@ Analysis & Reporting
 Power BI can connect to this project's data through multiple methods:
 
 #### Method 1: CSV File Connection
+
 1. Open Power BI Desktop
 2. Click **Get Data** → **Text/CSV**
 3. Navigate to `data/processed/` folder
@@ -327,12 +345,14 @@ Power BI can connect to this project's data through multiple methods:
 5. Click **Load**
 
 #### Method 2: Direct Database Connection
+
 1. Configure SQL scripts in `sql/` directory
 2. Set up database connection string
 3. Use Power BI's SQL Server connector
 4. Load data directly from queries
 
 #### Method 3: Python Script Integration
+
 1. In Power BI Desktop, go to **Get Data** → **Python Script**
 2. Reference Python scripts from `python/scripts/`
 3. Execute data loading logic
@@ -404,11 +424,12 @@ Power BI can connect to this project's data through multiple methods:
 ## Requirements Summary
 
 ### Core Dependencies
+
 ```
 Python >= 3.11
 pandas >= 2.3.3
 plotly >= 6.4.0
-shiny >= 1.5.0
+steamlit 
 ydata-profiling[notebook,unicode] >= 4.17.0
 ```
 
@@ -429,7 +450,9 @@ For detailed dependency information, see `pyproject.toml`
 ## Troubleshooting
 
 ### Issue: Dashboard won't start
+
 **Solution:** Ensure virtual environment is activated and all dependencies are installed
+
 ```bash
 .venv\Scripts\activate.bat
 pip install -e .
@@ -437,16 +460,21 @@ make run-dashboard
 ```
 
 ### Issue: Data file not found
+
 **Solution:** Verify `Superstore.csv` is in `data/raw/` directory
 
 ### Issue: Import errors in notebooks
+
 **Solution:** Restart kernel and reinstall packages
+
 ```bash
 pip install -r requirements.txt --force-reinstall
 ```
 
 ### Issue: Power BI connection fails
-**Solution:** 
+
+**Solution:**
+
 - Verify file path is correct
 - Check data format matches Power BI requirements
 - Try refreshing the connection in Power BI
@@ -472,6 +500,7 @@ This project is part of the Superstore Sales Analysis initiative.
 ## Contact & Support
 
 For questions or issues:
+
 - Review project documentation in `documentation/`
 - Check Jupyter notebooks for examples
 - Refer to inline code comments
@@ -481,4 +510,3 @@ For questions or issues:
 **Last Updated:** February 2026  
 **Project Version:** 0.1.0  
 **Status:** Active Development
-
