@@ -16,7 +16,7 @@ def load_data_from_postgres(db_user, db_password, db_host,db_port, db_name, db_t
         df = pd.read_sql_table(db_table_name,engine)
         #df.drop(columns=['Unnamed: 0'], inplace=True)
         table_name = db_table_name
-        file_path = f"C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\processed\\for_visualization\\{table_name}.csv"
+        file_path = Path.cwd().parents[1] /'data'/'processed' / 'for_visualization'/ f'{table_name}.csv'
         df.to_csv(file_path,index=False)
     except Exception as e:
         print(f"[+] An error occured :-> {e}")

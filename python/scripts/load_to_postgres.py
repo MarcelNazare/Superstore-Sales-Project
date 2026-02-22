@@ -22,7 +22,8 @@ def load_into_table(file_name,dataframe,db_user, db_password, db_host, db_name, 
 def main():
     # Running main function
     # Reading dataframe from csv
-    processed_file = "C:\\Users\\marcel\\Documents\\Data Analysis Projects\\Superstore Sales Project\\data\\processed\\superstore_cleaned.csv"
+
+    processed_file = Path.cwd().parents[1] /'data'/'processed' /  'superstore_cleaned.csv' 
     df = pd.read_csv(processed_file, encoding='latin1')
     df.drop(columns=['Unnamed: 0'], inplace=True)
     # Creaeting the dimensions dataframes
