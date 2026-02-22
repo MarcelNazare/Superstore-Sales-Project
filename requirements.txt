@@ -247,6 +247,7 @@ python-lsp-server @ file:///home/conda/feedstock_root/build_artifacts/python-lsp
 python-multipart==0.0.20
 python-slugify @ file:///home/conda/feedstock_root/build_artifacts/python-slugify_1733756245724/work
 python-socketio==5.13.0
+python-stats @ git+https://github.com/RanaEhtashamAli/py-stats.git@b4e22c80a05c0e7c2b70ebd5f9f8e5c0730cfab1
 pytoolconfig @ file:///home/conda/feedstock_root/build_artifacts/pytoolconfig_1733360721313/work
 pytz==2024.1
 pyuca @ file:///home/conda/feedstock_root/build_artifacts/pyuca_1734685489013/work

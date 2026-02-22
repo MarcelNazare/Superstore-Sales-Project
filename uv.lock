@@ -1847,15 +1847,6 @@ wheels = [
 ]
 
 [[package]]
-name = "perlcompat"
-version = "1.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/38/aa/0c57c10ce466505988f04c7e05a35279a4dedb6b6bf8819a165e02819f56/perlcompat-1.1.tar.gz", hash = "sha256:1d2568814b2ceef1dc32c1393fab78c6dd94bea04eb50b97828f7dc3c3b1a5ea", size = 3100, upload-time = "2019-07-05T09:20:12.276Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/42/ab/328e564486228c8ed12085e4439fd39351e23333f52a8ed6833e4715efb8/perlcompat-1.1-py3-none-any.whl", hash = "sha256:4548c2c91fd3df95015581d8454f1d568b0851f6e89057315cfb3baf80c0af6d", size = 15780, upload-time = "2019-07-05T09:20:10.277Z" },
-]
-
-[[package]]
 name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2145,18 +2136,6 @@ wheels = [
 ]
 
 [[package]]
-name = "py-stats"
-version = "0.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "perlcompat" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/6b/92/eea383d2e7469a20670694cbb9b2883d429d723f090c7da53d6b77c163cc/py-stats-0.2.tar.gz", hash = "sha256:0cb63bf846d48fbbdc18cf1e3fbf42e7269484afe897f7c84585a42dabf538ba", size = 7245, upload-time = "2023-03-20T18:20:05.526Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d0/de/3ec76da4f5c4fcf27a3b02c09b1eaa968cecbe0b26d1c457003e00d635a7/py_stats-0.2-py3-none-any.whl", hash = "sha256:201a98e485fbcc7dee07e398b49ec91221d29c0cf2a81f9a85b1bcc53c8e673e", size = 18746, upload-time = "2023-03-20T18:20:03.842Z" },
-]
-
-[[package]]
 name = "pycparser"
 version = "2.23"
 source = { registry = "https://pypi.org/simple" }
@@ -2332,6 +2311,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f3/87/f44d7c9f274c7ee665a29b885ec97089ec5dc034c7f3fafa03da9e39a09e/python_multipart-0.0.20.tar.gz", hash = "sha256:8dd0cab45b8e23064ae09147625994d090fa46f5b0d1e13af944c331a7fa9d13", size = 37158, upload-time = "2024-12-16T19:45:46.972Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/45/58/38b5afbc1a800eeea951b9285d3912613f2603bdf897a4ab0f4bd7f405fc/python_multipart-0.0.20-py3-none-any.whl", hash = "sha256:8a62d3a8335e06589fe01f2a3e178cdcc632f3fbe0d492ad9ee0ec35aab1f104", size = 24546, upload-time = "2024-12-16T19:45:44.423Z" },
+]
+
+[[package]]
+name = "python-stats"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6a/ed/88853019c1d09f988ea2455c82f577adb3e00ab38d5f9282d491c2dbc691/python_stats-1.0.1.tar.gz", hash = "sha256:9d2d6d7296fab7ba5610ed7a105836161ca765ddaee3d69bc04974e9b6408f2e", size = 29878, upload-time = "2025-09-04T00:07:21.703Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/57/19/9cb6cd568e54d9ab383752259755379f12bc30921dbcdcae002c44256833/python_stats-1.0.1-py3-none-any.whl", hash = "sha256:5bc4d2c34163b25c1252a60f9069f4b072862b5bde53713fcceacc97b58da157", size = 19021, upload-time = "2025-09-04T00:07:20.767Z" },
 ]
 
 [[package]]
@@ -3053,7 +3044,7 @@ dependencies = [
     { name = "plotly" },
     { name = "prophet" },
     { name = "psycopg2" },
-    { name = "py-stats" },
+    { name = "python-stats" },
     { name = "scikit-learn" },
     { name = "shiny" },
     { name = "shinywidgets" },
@@ -3069,7 +3060,7 @@ requires-dist = [
     { name = "plotly", specifier = ">=6.4.0" },
     { name = "prophet", specifier = ">=1.3.0" },
     { name = "psycopg2", specifier = ">=2.9.11" },
-    { name = "py-stats", specifier = ">=0.2" },
+    { name = "python-stats", specifier = ">=1.0.1" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "shiny", specifier = ">=1.5.0" },
     { name = "shinywidgets", specifier = ">=0.7.1" },
